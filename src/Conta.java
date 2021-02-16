@@ -7,7 +7,19 @@ class Conta {
     private int agencia;
     private String banco;
     private String titular;
+
     private double saldo;
+
+    public void abrirConta ( long numero, int agencia, String banco, String titular ) {
+        this.numero = numero;
+        this.agencia = agencia;
+        this.banco = banco;
+        this.titular = titular;
+    }
+
+    public void abrirConta ( long numero, String titular ) {
+        abrirConta(numero, 1400, "REAL", titular);
+    }
 
     /**
      * sintaxe metodo
@@ -38,37 +50,6 @@ class Conta {
      /**
       * Métodos Getters e Setters
       */
-     public long getNumero() {
-         return numero;
-     }
-
-     public void setNumero(long numero) {
-         this.numero = numero;
-     }
-
-     public int getAgencia() {
-         return agencia;
-     }
-
-     public void setAgencia(int agencia) {
-         this.agencia = agencia;
-     }
-
-     public String getBanco() {
-         return banco;
-     }
-
-     public void setBanco(String banco) {
-         this.banco = banco;
-     }
-
-     public String getTitular() {
-         return titular;
-     }
-
-     public void setTitular(String titular){
-        this.titular = titular;
-     }
 
      public double getSaldo() {
          return saldo;
