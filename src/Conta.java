@@ -10,6 +10,14 @@ class Conta {
 
     private double saldo;
 
+    /**
+     * [modificadores]  <NomeClasse> ([Parametros...]) {}
+     */
+
+     public Conta() {
+         System.out.println("Conta criada!");
+     }
+
     public void abrirConta ( long numero, int agencia, String banco, String titular ) {
         this.numero = numero;
         this.agencia = agencia;
