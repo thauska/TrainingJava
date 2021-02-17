@@ -6,7 +6,7 @@ class Conta {
     private long numero;
     private int agencia;
     private String banco;
-    private String titular;
+    private Cliente titular;
 
     private double saldo;
 
@@ -23,7 +23,11 @@ class Conta {
         this.numero = numero;
         this.agencia = agencia;
         this.banco = banco;
-        this.titular = titular;
+
+        // Cria instância Cliente e seta String titular
+        this.titular = new Cliente();
+        this.titular.setNome(titular);
+
         System.out.println("Qualquer Conta");
      }
 
@@ -36,7 +40,9 @@ class Conta {
         this.numero = numero;
         this.agencia = agencia;
         this.banco = banco;
-        this.titular = titular;
+
+        this.titular = new Cliente();
+        this.titular.setNome(titular);
     }
 
     public void abrirConta ( long numero, String titular ) {
