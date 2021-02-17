@@ -14,9 +14,23 @@ class Conta {
      * [modificadores]  <NomeClasse> ([Parametros...]) {}
      */
 
-     public Conta() {
-         System.out.println("Conta criada!");
+     public Conta(long numero, String titular) {
+         this(numero, 1400, "REAL", titular);
+         System.out.println("Conta default!");
      }
+
+     public Conta( long numero, int agencia, String banco, String titular ) {
+        this.numero = numero;
+        this.agencia = agencia;
+        this.banco = banco;
+        this.titular = titular;
+        System.out.println("Qualquer Conta");
+     }
+
+     
+    public Conta() {
+        System.out.println("Conta vazia");
+    }
 
     public void abrirConta ( long numero, int agencia, String banco, String titular ) {
         this.numero = numero;

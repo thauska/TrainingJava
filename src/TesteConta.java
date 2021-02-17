@@ -2,8 +2,8 @@ class TesteConta {
 
     public static void main(String[] args) {
 
-        Conta salario = new Conta();
-        Conta corrente = new Conta();
+        Conta salario = new Conta(121212, "Maria José");
+        Conta corrente = new Conta(232323, "Maria Alice");
 
         salario.abrirConta(2312124, 1234, "X-023", "Zé Fulano");
 
