@@ -19,6 +19,15 @@ class Conta {
          System.out.println("Conta default!");
      }
 
+     /**
+      * 
+      * @param numero
+      * @param agencia
+      * @param banco
+      * @param titular
+      * @deprecated see constructor with Cliente
+      */
+     @Deprecated
      public Conta( long numero, int agencia, String banco, String titular ) {
         this.numero = numero;
         this.agencia = agencia;
@@ -79,8 +88,8 @@ class Conta {
       * Métodos Getters e Setters
       */
 
-     public double getSaldo() {
-         return saldo;
-     }
+    public double getSaldo() {
+        return saldo;
+    }
 
 }
