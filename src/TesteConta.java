@@ -22,7 +22,7 @@ class TesteConta {
 
         System.out.println("-------------------- ");
 
-        if (salario.depositar(-100)) {
+        if (salario.depositar(100)) {
             System.out.println("Depositado :D " + salario.getSaldo());
         } else {
             System.out.println("Não foi depositado.");

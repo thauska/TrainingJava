@@ -4,8 +4,8 @@
 class Conta {
     
     private long numero;
-    private int agencia;
-    private String banco;
+    private Agencia agencia;
+    private Banco banco;
     private Cliente titular;
 
     private double saldo;
@@ -30,8 +30,11 @@ class Conta {
      @Deprecated
      public Conta( long numero, int agencia, String banco, String titular ) {
         this.numero = numero;
-        this.agencia = agencia;
-        this.banco = banco;
+        
+        this.agencia = new Agencia();
+        this.agencia.setNumero(agencia);
+
+        this.agencia.getBanco().setNumero(banco);
 
         // Cria instância Cliente e seta String titular
         this.titular = new Cliente();
@@ -47,8 +50,11 @@ class Conta {
 
     public void abrirConta ( long numero, int agencia, String banco, String titular ) {
         this.numero = numero;
-        this.agencia = agencia;
-        this.banco = banco;
+
+        this.agencia = new Agencia();
+        this.agencia.setNumero(agencia);
+
+        this.agencia.getBanco().setNumero(banco);
 
         this.titular = new Cliente();
         this.titular.setNome(titular);
@@ -103,34 +109,6 @@ class Conta {
     }
 
     /**
-     * @return int return the agencia
-     */
-    public int getAgencia() {
-        return agencia;
-    }
-
-    /**
-     * @param agencia the agencia to set
-     */
-    public void setAgencia(int agencia) {
-        this.agencia = agencia;
-    }
-
-    /**
-     * @return String return the banco
-     */
-    public String getBanco() {
-        return banco;
-    }
-
-    /**
-     * @param banco the banco to set
-     */
-    public void setBanco(String banco) {
-        this.banco = banco;
-    }
-
-    /**
      * @return Cliente return the titular
      */
     public Cliente getTitular() {
@@ -153,6 +131,21 @@ class Conta {
 
     public double getSaldo() {
         return saldo;
+    }
+
+
+    /**
+     * @return Agencia return the agencia
+     */
+    public Agencia getAgencia() {
+        return agencia;
+    }
+
+    /**
+     * @return Banco return the banco
+     */
+    public Banco getBanco() {
+        return banco;
     }
 
 }
