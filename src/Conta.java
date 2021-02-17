@@ -88,6 +88,69 @@ class Conta {
       * Métodos Getters e Setters
       */
 
+    /**
+     * @return long return the numero
+     */
+    public long getNumero() {
+        return numero;
+    }
+
+    /**
+     * @param numero the numero to set
+     */
+    public void setNumero(long numero) {
+        this.numero = numero;
+    }
+
+    /**
+     * @return int return the agencia
+     */
+    public int getAgencia() {
+        return agencia;
+    }
+
+    /**
+     * @param agencia the agencia to set
+     */
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    /**
+     * @return String return the banco
+     */
+    public String getBanco() {
+        return banco;
+    }
+
+    /**
+     * @param banco the banco to set
+     */
+    public void setBanco(String banco) {
+        this.banco = banco;
+    }
+
+    /**
+     * @return Cliente return the titular
+     */
+    public Cliente getTitular() {
+        return titular;
+    }
+
+    /**
+     * @param titular the titular to set
+     */
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
+
+    /**
+     * @param saldo the saldo to set
+     */
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
     public double getSaldo() {
         return saldo;
     }
