@@ -7,6 +7,8 @@ public class Cliente {
     private String rg;
     private String cpf;
 
+    private Conta[] contas;
+
     public Cliente( String nome, String rg, String cpf ) {
         this.nome = nome;
         this.rg = rg;
@@ -56,6 +58,21 @@ public class Cliente {
      */
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+
+    /**
+     * @return Conta[] return the contas
+     */
+    public Conta[] getContas() {
+        return contas;
+    }
+
+    /**
+     * @param contas the contas to set
+     */
+    public void setContas(Conta[] contas) {
+        this.contas = contas;
     }
 
 }
